@@ -37,7 +37,7 @@
 						<p>Верстка на HTML и CSS <br>Разработка сайтов под ключ</p>
 					</div>
 				</div>
-				<a class="main-down slowly" href="#portfolio"><i class="icon-down"></i></a>
+				<a class="down slowly" href="#portfolio"><i class="icon-down"></i></a>
 			</div> 
 
 			<div class="portfolio" id="portfolio">
@@ -119,7 +119,7 @@
     </script>
 
     <script>
-    	$(document).ready(function()) {
+    	$(document).ready(function() {
 
     		 $(".slowly").on("click", function (event) {
 
@@ -129,10 +129,12 @@
  
     	    	 top = $(id).offset().top;
 
-        		 $('body,html').animate({scrollTop: top}, 800);
+        		 $('body,html').animate({
+        		 	scrollTop: top
+        		 }, 800);
     		 });
 
-    	};
+    	});
     </script>
   </body>
 </html>
