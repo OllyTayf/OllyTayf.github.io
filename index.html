@@ -37,31 +37,31 @@
 						<p>Верстка на HTML и CSS <br>Разработка сайтов под ключ</p>
 					</div>
 				</div>
-				<a class="main-down" href="#portfolio"><i class="icon-down"></i></a>
+				<a class="main-down slowly" href="#portfolio"><i class="icon-down"></i></a>
 			</div> 
 
 			<div class="portfolio" id="portfolio">
 				<div class="container">
-					<h2 class="section-header">Портфолио</h2>
-					<div class="row">
-						<div class="col-md-4">
-							<div class="portfolio-block">
-							<img src="img/portfolio/1.jpg" alt="Работа №1">
-							<a data-toggle="modal" data-work='work-1' href="#work">Смотреть работу</a>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="portfolio-block">
-							<img src="img/portfolio/2.jpg" alt="Работа №2">
-							<a data-toggle="modal" data-work='work-2' href="#work">Смотреть работу</a>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="portfolio-block">
-							<img src="img/portfolio/3.jpg" alt="Работа №3">
-							<a data-toggle="modal" data-work='work-3' href="#work">Смотреть работу</a>
-							</div>
-						</div>
+					 <h2 class="section-header">Портфолио</h2>
+					   <div class="row">
+					  	 <div class="col-md-4">
+						    <div class="portfolio-block">
+						    <img src="img/portfolio/1.jpg" alt="Работа №1">
+						    <a data-toggle="modal" data-work='work-1' href="#work">Смотреть работу</a>
+						    </div>
+					  	 </div>
+						  <div class="col-md-4">
+						   <div class="portfolio-block">
+						   <img src="img/portfolio/2.jpg" alt="Работа №2">
+						   <a data-toggle="modal" data-work='work-2' href="#work">Смотреть работу</a>
+						   </div>
+						  </div>
+						 <div class="col-md-4">
+						  <div class="portfolio-block">
+						  <img src="img/portfolio/3.jpg" alt="Работа №3">
+						  <a data-toggle="modal" data-work='work-3' href="#work">Смотреть работу</a>
+						  </div>
+						 </div>
 					</div>
 				</div>
 			</div>   
@@ -119,20 +119,20 @@
     </script>
 
     <script>
-    	$(document).ready(function() {
+    	$(document).ready(function()) {
 
-    	$(".slowly").on("click","a", function (event) {
+    		 $(".slowly").on("click", function (event) {
 
-        	event.preventDefault();
+        	   event.preventDefault();
 
-        	var id  = $(this).attr('href'),
+	        	 var id = $(this).attr('href'),
+ 
+    	    	 top = $(id).offset().top;
 
-        	top = $(id).offset().top;
+        		 $('body,html').animate({scrollTop: top}, 800);
+    		 });
 
-        	$('body,html').animate({scrollTop: top}, 2s);
-    	});
-
-      });
+    	};
     </script>
   </body>
 </html>
